@@ -1,1 +1,0 @@
-vars stam groovy
