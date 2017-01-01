@@ -9,13 +9,10 @@ class FileUtils{
         return Files.deleteIfExists(file.toPath())
     }
 
-    def createOrUpdate(directory, fileName, extension, infoList){
+    def createOrUpdate(directory, fileName, extension, infoList) {
         if(directory == null)  directory = System.getProperty("user.dir")
         new File("$directory/$fileName$extension").withWriter { out ->
         out.println infoList
-    // infoList.each {
-    //   out.println it
-    // }
-      }
+        }
     }
 }
