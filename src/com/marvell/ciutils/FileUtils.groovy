@@ -13,7 +13,7 @@ class FileUtils{
     }
 
    def printInfo(){
-        Path dir = Paths.get('resources') 
+        Path dir = System.getProperty("user.dir")
         BasicFileAttributes attrs = Files.readAttributes(dir, BasicFileAttributes) 
         
         println """
