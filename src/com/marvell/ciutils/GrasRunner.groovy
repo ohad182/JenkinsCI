@@ -15,8 +15,8 @@ class GrasRunner{
 
       GRAS.exe ?
     """
-  }
   steps.print "end gras"
+  }
 
 
 
