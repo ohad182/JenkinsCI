@@ -17,9 +17,9 @@ class FileUtils{
         return Files.deleteIfExists(file.toPath())
     }
 
-   def printInfo(){
+   def printInfo(script){
        def userDir = System.getProperty("user.dir")
-       steps.bat "echo hellow world"
+       script.bat "echo hellow world"
        
 //       """
 //            echo "before"
