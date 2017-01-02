@@ -49,6 +49,12 @@ class FileUtils{
         //}
     }
 
+    def printSomething(){
+    println "wait wait with ln"
+    print "wait wait no ln"
+        echo "wait wait with echo"
+    }
+    
     def createOrUpdate(directory, fileName, extension, infoList) {
         if(directory == null)  directory = System.getProperty("user.dir")
         new File("$directory/$fileName$extension").withWriter { out ->
