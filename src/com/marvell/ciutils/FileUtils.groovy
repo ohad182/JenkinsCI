@@ -23,7 +23,7 @@ class FileUtils implements Serializable{
        
        steps.print "user dir: ${userDir}"
        steps.print "user name: ${userName}"
-       steps.print "env.home= ${steps.env}"
+       steps.print "env.home.branch= ${steps.env.BRANCH_NAME}"
 //       """
 //            echo "before"
 //       echo "${userDir}"
