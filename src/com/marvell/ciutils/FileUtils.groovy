@@ -20,8 +20,8 @@ class FileUtils implements Serializable{
    def printInfo(){
        def userDir = System.getProperty("user.dir")
        def userName = System.getProperty("user.name")
-       steps.print "hello world ${userDir}"
-       steps.bat "echo user name ${userName}"
+       steps.print "user dir: ${userDir}"
+       steps.print "user name: ${userName}"
        
 //       """
 //            echo "before"
