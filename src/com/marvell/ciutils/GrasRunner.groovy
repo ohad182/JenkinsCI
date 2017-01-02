@@ -11,7 +11,7 @@ class GrasRunner{
   def runGras(){
     steps.print "start gras"
     steps.bat """
-      cd "c:\Program Files (x86)\Marvell\GRAS"
+      cd "c:/Program Files (x86)/Marvell/GRAS"
 
       GRAS.exe ?
     """
