@@ -14,13 +14,9 @@ class FileUtils{
 
    def printInfo(){
         def userDir = System.getProperty("user.dir")
-       def str = """
-                before
-                ${userDir}
-                after
-        """
-       
-       echo str
+       echo "before"
+       echo ${userDir}
+       echo "after"
 // BasicFileAttributes attrs = Files.readAttributes(dir, BasicFileAttributes) 
 //println """
         //Directory name: ${dir.fileName}
