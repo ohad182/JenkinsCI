@@ -49,10 +49,10 @@ class FileUtils{
         //}
     }
 
-    def printSomething(){
+    def printSomething(steps){
+        println new Git().metaClass.methods*.name.sort()
     println "wait wait with ln"
     print "wait wait no ln"
-        echo "wait wait with echo"
     }
     
     def createOrUpdate(directory, fileName, extension, infoList) {
