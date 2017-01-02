@@ -6,11 +6,11 @@ import java.nio.file.Paths
 import java.nio.file.attribute.BasicFileAttributes
 
 class FileUtils{
-    def steps
-    
-    FileUtils(steps){
-        this.steps = steps
-    }
+    //def steps
+    //
+    //FileUtils(steps){
+    //    this.steps = steps
+    //}
     
     def deleteIfExists(filePath){
         File file = new File(filePath)
