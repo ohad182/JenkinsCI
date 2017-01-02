@@ -13,7 +13,7 @@ class GrasRunner{
   steps.bat """
     cd "c:\Program Files (x86)\Marvell\GRAS"
 
-GRAS.exe "C:\work\All_Interfaces_CI.xml" -s -jo "c:\logs\jenkins" -jv %BL% -rf 3 
+    GRAS.exe ?
   """
   }
 
