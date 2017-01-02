@@ -1,6 +1,6 @@
 package com.marvell.ciutils
 
-class GrasRunner{
+class GrasRunner implements Serializable{
   def steps
   
   GrasRunner(steps){
