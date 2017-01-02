@@ -9,13 +9,14 @@ class GrasRunner{
   
   
   def runGras(){
-  
-  steps.bat """
-    cd "c:\Program Files (x86)\Marvell\GRAS"
+    steps.print "start gras"
+    steps.bat """
+      cd "c:\Program Files (x86)\Marvell\GRAS"
 
-    GRAS.exe ?
-  """
+      GRAS.exe ?
+    """
   }
+  steps.print "end gras"
 
 
 
