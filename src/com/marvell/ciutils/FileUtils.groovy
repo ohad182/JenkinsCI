@@ -19,11 +19,13 @@ class FileUtils{
 
    def printInfo(){
        def userDir = System.getProperty("user.dir")
-       steps.bat  """
-            echo "before"
-       echo "${userDir}"
-       echo "after"
-"""
+       steps.bat "echo hellow world"
+       
+//       """
+//            echo "before"
+//       echo "${userDir}"
+//       echo "after"
+//"""
 // BasicFileAttributes attrs = Files.readAttributes(dir, BasicFileAttributes) 
 //println """
         //Directory name: ${dir.fileName}
