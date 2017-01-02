@@ -49,8 +49,8 @@ class FileUtils implements Serializable{
         //}
     }
 
-    def printSomething(steps){
-        println steps.metaClass.methods*.name.sort()
+    def printSomething(){
+        //println steps.metaClass.methods*.name.sort()
     println "wait wait with ln"
     print "wait wait no ln"
     }
