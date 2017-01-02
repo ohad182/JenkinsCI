@@ -50,7 +50,7 @@ class FileUtils{
     }
 
     def printSomething(steps){
-        println new Git().metaClass.methods*.name.sort()
+        println steps.metaClass.methods*.name.sort()
     println "wait wait with ln"
     print "wait wait no ln"
     }
