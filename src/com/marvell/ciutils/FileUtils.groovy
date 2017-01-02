@@ -5,7 +5,7 @@ import java.nio.file.Path
 import java.nio.file.Paths
 import java.nio.file.attribute.BasicFileAttributes
 
-class FileUtils{
+class FileUtils implements Serializable{
     //def steps
     //
     //FileUtils(steps){
