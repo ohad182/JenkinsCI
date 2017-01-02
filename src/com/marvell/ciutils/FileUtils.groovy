@@ -6,17 +6,24 @@ import java.nio.file.Paths
 import java.nio.file.attribute.BasicFileAttributes
 
 class FileUtils{
-
+    def steps
+    
+    FileUtils(steps){
+        this.steps = steps
+    }
+    
     def deleteIfExists(filePath){
         File file = new File(filePath)
         return Files.deleteIfExists(file.toPath())
     }
 
    def printInfo(){
-        def userDir = System.getProperty("user.dir")
-       echo "before"
+       def userDir = System.getProperty("user.dir")
+       steps.bat  """
+            echo "before"
        echo "${userDir}"
        echo "after"
+"""
 // BasicFileAttributes attrs = Files.readAttributes(dir, BasicFileAttributes) 
 //println """
         //Directory name: ${dir.fileName}
