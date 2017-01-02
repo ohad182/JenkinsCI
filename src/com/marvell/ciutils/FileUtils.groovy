@@ -17,9 +17,9 @@ class FileUtils implements Serializable{
         return Files.deleteIfExists(file.toPath())
     }
 
-   def printInfo(script){
+   def printInfo(){
        def userDir = System.getProperty("user.dir")
-       script.bat "echo hello world"
+       steps.bat "echo hello world"
        
 //       """
 //            echo "before"
