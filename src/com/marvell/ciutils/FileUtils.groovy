@@ -19,7 +19,7 @@ class FileUtils{
 
    def printInfo(script){
        def userDir = System.getProperty("user.dir")
-       script.bat echo "hello world"
+       script.bat 'echo "hellow world"'
        
 //       """
 //            echo "before"
