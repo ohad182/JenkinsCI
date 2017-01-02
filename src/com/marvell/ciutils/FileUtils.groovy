@@ -6,11 +6,11 @@ import java.nio.file.Paths
 import java.nio.file.attribute.BasicFileAttributes
 
 class FileUtils implements Serializable{
-    //def steps
-    //
-    //FileUtils(steps){
-    //    this.steps = steps
-    //}
+    def steps
+    
+    FileUtils(steps){
+        this.steps = steps
+    }
     
     def deleteIfExists(filePath){
         File file = new File(filePath)
@@ -19,7 +19,7 @@ class FileUtils implements Serializable{
 
    def printInfo(script){
        def userDir = System.getProperty("user.dir")
-       //script.bat echo "hello world"
+       script.bat "echo hello world"
        
 //       """
 //            echo "before"
