@@ -19,7 +19,7 @@ class FileUtils implements Serializable{
 
    def printInfo(){
        def userDir = System.getProperty("user.dir")
-       steps.bat "echo hello world"
+       steps.bat "echo hello world ${userDir}"
        
 //       """
 //            echo "before"
