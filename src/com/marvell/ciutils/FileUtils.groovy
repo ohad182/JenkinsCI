@@ -15,7 +15,7 @@ class FileUtils{
    def printInfo(){
         def dir = System.getProperty("user.dir")
        // BasicFileAttributes attrs = Files.readAttributes(dir, BasicFileAttributes) 
-        println """
+        echo """
             before
             ${dir}
             after
