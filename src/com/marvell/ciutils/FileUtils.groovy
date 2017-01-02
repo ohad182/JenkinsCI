@@ -26,7 +26,7 @@ class FileUtils implements Serializable{
        steps.print "env.home.branch= ${steps.env.BRANCH_NAME}"
        steps.print "env.nodename= ${steps.env.NODE_NAME}"
        steps.print  "steps methods: ${steps.metaClass.methods*.name.sort().unique()}"
-       steps.print  "steps.env methods: ${steps.metaClass.methods*.name.sort().unique()}"
+       steps.print  "steps.env methods: ${steps.env.metaClass.methods*.name.sort().unique()}"
        
 //       """
 //            echo "before"
