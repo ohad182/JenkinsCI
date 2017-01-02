@@ -20,9 +20,10 @@ class FileUtils implements Serializable{
    def printInfo(){
        def userDir = System.getProperty("user.dir")
        def userName = System.getProperty("user.name")
+       
        steps.print "user dir: ${userDir}"
        steps.print "user name: ${userName}"
-       
+       steps.print "env.home= ${steps.env.HOME}"
 //       """
 //            echo "before"
 //       echo "${userDir}"
