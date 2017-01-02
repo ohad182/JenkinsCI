@@ -13,7 +13,7 @@ class GrasRunner{
     steps.bat """
       cd "c:/Program Files (x86)/Marvell/GRAS"
 
-      GRAS.exe ?
+      runas /user:Administrator GRAS.exe ?
     """
   steps.print "end gras"
   }
