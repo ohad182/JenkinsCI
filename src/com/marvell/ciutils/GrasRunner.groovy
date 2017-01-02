@@ -13,7 +13,7 @@ class GrasRunner implements Serializable{
     steps.bat """
       cd "c:/Program Files (x86)/Marvell/GRAS"
 
-      runas /user:Administrator GRAS.exe ?
+      GRAS.exe ?
     """
   steps.print "end gras"
   }
