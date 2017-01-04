@@ -14,6 +14,6 @@ class MtsUtils{
       build_type is $BUILD_TYPE
       '''
       
-      steps.echo new File('/swdev/fileril103/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl').text
+      steps.echo new File('\\fileril103\dev\TOOLS\cc1tools\utils\auto_compile_git/Start_Build_Bx.pl').text
   }
 }
