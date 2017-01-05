@@ -16,7 +16,6 @@ class FileUtils implements Serializable{
         def returnVal = false;
         try{
         File file = new File(filePath)
-        def returnStr = "${filePath} " + Files.deleteIfExists(file.toPath()) ? "was deleted" : "does not exist"
         returnVal = "${filePath} " + Files.deleteIfExists(file.toPath()) ? "was deleted" : "does not exist"
         }
         catch(Exception e){
