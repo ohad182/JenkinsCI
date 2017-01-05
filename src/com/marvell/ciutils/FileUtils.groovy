@@ -20,7 +20,7 @@ class FileUtils implements Serializable{
         returnVal = "${filePath} " + Files.deleteIfExists(file.toPath()) ? "was deleted" : "does not exist"
         }
         catch(all){
-            returnVal = all.getMessage()
+            returnVal = "error: " + all.getMessage()
         }
         finally{
             return returnVal
