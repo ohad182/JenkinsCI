@@ -19,7 +19,7 @@ class FileUtils implements Serializable{
         returnVal = "${filePath} " + Files.deleteIfExists(file.toPath()) ? "was deleted" : "does not exist"
         }
         catch(Exception e){
-            steps.echo "all exception properties: ${e.getProperties.toString()}"
+            //steps.echo "all exception properties: ${e.getProperties.toString()}"
             returnVal = "error: " + e.toString()
         }
         finally{
