@@ -12,19 +12,9 @@ class FileUtils implements Serializable{
         this.steps = steps
     }
     
-    def deleteIfExists(filePath){
-        def returnVal = false;
-        try{
+    def deleteIfExists(filePath) throws AccessDeniedException{
         File file = new File(filePath)
-        returnVal = "${filePath} " + Files.deleteIfExists(file.toPath()) ? "was deleted" : "does not exist"
-        }
-        catch(Exception e){
-            //steps.echo "all exception properties: ${e.getProperties.toString()}"
-            returnVal = "error: " + e.toString()
-        }
-        finally{
-            return returnVal
-        }
+        return "${filePath} " + Files.deleteIfExists(file.toPath()) ? "was deleted" : "does not exist"
     }
 
    def printInfo(){
