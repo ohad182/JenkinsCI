@@ -21,6 +21,7 @@ class FileUtils implements Serializable{
         }
         catch(all){
             returnVal = "error: " + all.getMessage()
+            steps.print  "all exception properties: ${all.getProperties.toString()}"
         }
         finally{
             return returnVal
