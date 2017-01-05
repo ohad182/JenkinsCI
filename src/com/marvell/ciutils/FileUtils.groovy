@@ -1,9 +1,6 @@
 package com.marvell.ciutils
 
-import java.nio.file.Files
-import java.nio.file.Path
-import java.nio.file.Paths
-import java.nio.file.attribute.BasicFileAttributes
+import java.nio.file.*
 
 class FileUtils implements Serializable{
     def steps
