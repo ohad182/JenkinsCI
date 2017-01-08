@@ -1,1 +1,2 @@
 ## acme is a global variable
+<b>this is bold text</b>
