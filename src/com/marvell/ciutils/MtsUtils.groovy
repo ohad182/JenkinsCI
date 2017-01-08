@@ -8,12 +8,12 @@ class MtsUtils{
     }
   
   def startBuild(printer){
-    println """
+    printer.println """
              box_name is ${env.BOX_NAME}
              box branch is ${env.BOX_BRANCH}
              build_type is ${env.BUILD_TYPE}
       """
     //send to the .pl these three vars
-      println new File('//fileril103/dev/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl').text
+      printer.println new File('//fileril103/dev/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl').text
   }
 }
