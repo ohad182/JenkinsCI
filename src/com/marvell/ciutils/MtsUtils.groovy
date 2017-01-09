@@ -15,7 +15,7 @@ class MtsUtils{
  * 2. BOX_BRANCH
  * 3. BUILD_TYPE (box or core)
  */
-  def startBuild(printer){
+  def startBuild(){
     steps.echo """
              box_name is ${env.BOX_NAME}
              box_branch is ${env.BOX_BRANCH}
@@ -38,8 +38,8 @@ class MtsUtils{
  * The parameters are getting from the specjfic build task
  * 6. BUILD_TYPE (box or core)
  */
-  def compilationProcess(printer){
-    printer.println """
+  def compilationProcess(){
+    steps.echo """
             box_name is: ${env.BOX_NAME}
             box_branch is: ${env.BOX_BRANCH}
             core_branch is: ${env.CORE_BRANCH}
@@ -51,8 +51,8 @@ class MtsUtils{
       """
     //send to the .pl these three vars
     // ${env.BOX_NAME} ${env.BOX_BRANCH} ${env.CORE_BRANCH} ${env.MTS_BUILD_SYSTEM_BRANCH} ${env.REST_API_BRANCH} ${env.BUILD_TYPE} ${env.Webs_are_separated} ${env.INTERNAL} ${env.SNA_WEB_BRANCH} ${env.SNA_GUI_BRANCH} ${env.WEB_CORE_GUI_BRANCH} ${env.BX_WEB_NAME} ${env.BX_WEB_BRANCH} > /swdev/fileril103/TOOLS/CC_SUPPORT/logs/MTS_COMPILATION/COMP_"${env.BUILD_TYPE}"_"${env.BOX_BRANCH}"_`date +\%Y\%m\%d\%H\%M`.log"
-      def pearlFileWindows = "//fileril103/dev/TOOLS/cc1tools/utils/auto_compile_git/ros_compilation_git_no_webs.pl"
-      def pearlFileLinux = "/swdev/fileril103/TOOLS/cc1tools/utils/auto_compile_git/ros_compilation_git_no_webs.pl"
-      printer.println new File(pearlFileWindows).text
+    def pearlFileWindows = "//fileril103/dev/TOOLS/cc1tools/utils/auto_compile_git/ros_compilation_git_no_webs.pl"
+    def pearlFileLinux = "/swdev/fileril103/TOOLS/cc1tools/utils/auto_compile_git/ros_compilation_git_no_webs.pl"
+    steps.echo new File(pearlFileWindows).text
   }
 }
