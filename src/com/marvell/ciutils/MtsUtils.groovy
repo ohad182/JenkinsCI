@@ -77,7 +77,7 @@ class MtsUtils{
       """
 /**set HOME=c:\Users\yedidiaf
 *set PERLBIN=\\fileril103\dev\TOOLS\cc1tools\perl\bin
-*set SCRIPTDIR=\\fileril103\dev\TOOLS\cc1tools\utils\auto_compile_git\
+*set SCRIPTDIR=\\fileril103\dev\TOOLS\cc1tools\utils\auto_compile_git
 *For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c%%a%%b)
 *For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a%%b)
 *set STAMP=%mydate%%mytime%.log
