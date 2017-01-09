@@ -17,9 +17,10 @@ class MtsUtils{
  */
   def startBuild(){
     steps.echo """
-             box_name is ${env.BOX_NAME}
-             box_branch is ${env.BOX_BRANCH}
-             build_type is ${env.BUILD_TYPE}
+startBuild
+box_name is ${env.BOX_NAME}
+box_branch is ${env.BOX_BRANCH}
+build_type is ${env.BUILD_TYPE}
       """
     //send to the .pl these three vars {filePath} $BOX_NAME $BOX_BRANCH $BUILD_TYPE
     def pearlFileWindows = "//fileril103/dev/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl"
@@ -40,14 +41,15 @@ class MtsUtils{
  */
   def compilationProcess(){
     steps.echo """
-            box_name is: ${env.BOX_NAME}
-            box_branch is: ${env.BOX_BRANCH}
-            core_branch is: ${env.CORE_BRANCH}
-            mts_build_system_branch is: ${env.MTS_BUILD_SYSTEM_BRANCH}
-            rest_api_branch is: ${env.REST_API_BRANCH}
-            build_type is: ${env.BUILD_TYPE}
-            webs_are_separated is: ${env.Webs_are_separated}
-            tests_are_needed is: ${env.Tests_Are_Needed}
+compilationProcess
+box_name is: ${env.BOX_NAME}
+box_branch is: ${env.BOX_BRANCH}
+core_branch is: ${env.CORE_BRANCH}
+mts_build_system_branch is: ${env.MTS_BUILD_SYSTEM_BRANCH}
+rest_api_branch is: ${env.REST_API_BRANCH}
+build_type is: ${env.BUILD_TYPE}
+webs_are_separated is: ${env.Webs_are_separated}
+tests_are_needed is: ${env.Tests_Are_Needed}
       """
     //send to the .pl these three vars
     // ${env.BOX_NAME} ${env.BOX_BRANCH} ${env.CORE_BRANCH} ${env.MTS_BUILD_SYSTEM_BRANCH} ${env.REST_API_BRANCH} ${env.BUILD_TYPE} ${env.Webs_are_separated} ${env.INTERNAL} ${env.SNA_WEB_BRANCH} ${env.SNA_GUI_BRANCH} ${env.WEB_CORE_GUI_BRANCH} ${env.BX_WEB_NAME} ${env.BX_WEB_BRANCH} > /swdev/fileril103/TOOLS/CC_SUPPORT/logs/MTS_COMPILATION/COMP_"${env.BUILD_TYPE}"_"${env.BOX_BRANCH}"_`date +\%Y\%m\%d\%H\%M`.log"
@@ -67,14 +69,54 @@ class MtsUtils{
  */
   def buildProcess(){
     steps.echo """
-            box_name is: ${env.BOX_NAME}
-            box_branch is: ${env.BOX_BRANCH}
-            core_branch is: ${env.CORE_BRANCH}
-            mts_build_system_branch is: ${env.MTS_BUILD_SYSTEM_BRANCH}
-            rest_api_branch is: ${env.REST_API_BRANCH}
-            build_type is: ${env.BUILD_TYPE}
-            webs_are_separated is: ${env.Webs_are_separated}
+buildProcess
+box_name is: ${env.BOX_NAME}
+box_branch is: ${env.BOX_BRANCH}
+core_branch is: ${env.CORE_BRANCH}
+mts_build_system_branch is: ${env.MTS_BUILD_SYSTEM_BRANCH}
+rest_api_branch is: ${env.REST_API_BRANCH}
+build_type is: ${env.BUILD_TYPE}
+webs_are_separated is: ${env.Webs_are_separated}
       """
   }
   
+ /**
+ * COMP process for MTS on Linux
+ * This task is running with 6 parameters:
+ * 1. BOX_NAME
+ * 2. BOX_BRANCH
+ * 3. CORE_BRANCH
+ * 4. MTS_BUILD_SYSTEM_BRANCH
+ * 5. REST_API_BRANCH (if not needed the valiew is NA)
+ * The parameters are getting from the specjfic build task
+ * 6. BUILD_TYPE (box or core)
+ */
+  def installBmImage(){
+    steps.echo """
+installBmImage
+box_name is: ${env.BOX_NAME}
+box_branch is: ${env.BOX_BRANCH}
+core_branch is: ${env.CORE_BRANCH}
+mts_build_system_branch is: ${env.MTS_BUILD_SYSTEM_BRANCH}
+rest_api_branch is: ${env.REST_API_BRANCH}
+build_type is: ${env.BUILD_TYPE}
+webs_are_separated is: ${env.Webs_are_separated}
+Tests_Are_Needed is: ${env.Tests_Are_Needed}
+      """
+  }
+  
+  def createReport(){
+  
+     steps.echo """
+createReport
+box_name is: ${env.BOX_NAME}
+box_branch is: ${env.BOX_BRANCH}
+core_branch is: ${env.CORE_BRANCH}
+mts_build_system_branch is: ${env.MTS_BUILD_SYSTEM_BRANCH}
+rest_api_branch is: ${env.REST_API_BRANCH}
+build_type is: ${env.BUILD_TYPE}
+webs_are_separated is: ${env.Webs_are_separated}
+Tests_Are_Needed is: ${env.Tests_Are_Needed}
+      """
+  }
 }
