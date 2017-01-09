@@ -75,25 +75,25 @@ class MtsUtils{
             build_type is: ${env.BUILD_TYPE}
             webs_are_separated is: ${env.Webs_are_separated}
       """
-    /*
-set HOME=c:\Users\yedidiaf
-set PERLBIN=\\fileril103\dev\TOOLS\cc1tools\perl\bin
-set SCRIPTDIR=\\fileril103\dev\TOOLS\cc1tools\utils\auto_compile_git\
-For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c%%a%%b)
-For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a%%b)
-set STAMP=%mydate%%mytime%.log
-echo STAMP is %STAMP%
-
-IF EXIST ..\baseline.txt del ..\baseline.txt
-copy /Y \\fileril103\dev\Objects_Git\%BOX_NAME%\%BOX_BRANCH%\next_BL_done.txt ..\baseline.txt
-::copy /Y \\fileril103\dev\Objects_Git\cisco_tesla_bx\cisco_tesla_bx_v2.3\next_BL_done.txt ..\baseline.txt
-set /p BL=<..\baseline.txt
-
-::%PERLBIN%\perl.exe %SCRIPTDIR%\ros_compilation_git_BL_NO_WEB.pl %BOX_NAME% %BOX_BRANCH% %CORE_BRANCH% %MTS_BUILD_SYSTEM_BRANCH% %BUILD_TYPE% > ::\\fileril103\dev\TOOLS\CC_SUPPORT\logs\MTS_COMPILATION\BL_%BUILD_TYPE%_%BOX_BRANCH%_%STAMP%.log 2>&1
-
-
-%PERLBIN%\perl.exe %SCRIPTDIR%\ros_compilation_git_BL_no_webs.pl %BOX_NAME% %BOX_BRANCH% %CORE_BRANCH% %MTS_BUILD_SYSTEM_BRANCH% %BUILD_TYPE% %Webs_are_separated% %SNA_WEB_BRANCH% %SNA_GUI_BRANCH% %WEB_CORE_GUI_BRANCH% %BX_WEB_NAME% %BX_WEB_BRANCH%  %Webs_are_separated%  > \\fileril103\dev\TOOLS\CC_SUPPORT\logs\MTS_COMPILATION\BL_%BUILD_TYPE%_%BOX_BRANCH%_%STAMP%.log 2>&1
-    */
+/**    
+* set HOME=c:\Users\yedidiaf
+* set PERLBIN=\\fileril103\dev\TOOLS\cc1tools\perl\bin
+* set SCRIPTDIR=\\fileril103\dev\TOOLS\cc1tools\utils\auto_compile_git\
+* For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c%%a%%b)
+* For /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a%%b)
+* set STAMP=%mydate%%mytime%.log
+* echo STAMP is %STAMP%
+* 
+* IF EXIST ..\baseline.txt del ..\baseline.txt
+* copy /Y \\fileril103\dev\Objects_Git\%BOX_NAME%\%BOX_BRANCH%\next_BL_done.txt ..\baseline.txt
+* ::copy /Y \\fileril103\dev\Objects_Git\cisco_tesla_bx\cisco_tesla_bx_v2.3\next_BL_done.txt ..\baseline.txt
+* set /p BL=<..\baseline.txt
+* 
+* ::%PERLBIN%\perl.exe %SCRIPTDIR%\ros_compilation_git_BL_NO_WEB.pl %BOX_NAME% %BOX_BRANCH% %CORE_BRANCH% %MTS_BUILD_SYSTEM_BRANCH% %BUILD_TYPE% > ::\\fileril103\dev\TOOLS\CC_SUPPORT\logs\MTS_COMPILATION\BL_%BUILD_TYPE%_%BOX_BRANCH%_%STAMP%.log 2>&1
+* 
+* 
+* %PERLBIN%\perl.exe %SCRIPTDIR%\ros_compilation_git_BL_no_webs.pl %BOX_NAME% %BOX_BRANCH% %CORE_BRANCH% %MTS_BUILD_SYSTEM_BRANCH% %BUILD_TYPE% %Webs_are_separated% %SNA_WEB_BRANCH% %SNA_GUI_BRANCH% %WEB_CORE_GUI_BRANCH% %BX_WEB_NAME% %BX_WEB_BRANCH%  %Webs_are_separated%  > \\fileril103\dev\TOOLS\CC_SUPPORT\logs\MTS_COMPILATION\BL_%BUILD_TYPE%_%BOX_BRANCH%_%STAMP%.log 2>&1
+*/    
     
     
   }
