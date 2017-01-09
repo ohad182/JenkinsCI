@@ -2,9 +2,10 @@ package com.marvell.ciutils
 
 class MtsUtils{
   def env
-  
-  MtsUtils(env){
+  def steps
+  MtsUtils(env, steps){
     this.env = env
+    this.steps = steps
     }
   
  /**
@@ -15,7 +16,7 @@ class MtsUtils{
  * 3. BUILD_TYPE (box or core)
  */
   def startBuild(printer){
-    printer.println """
+    steps.println """
              box_name is ${env.BOX_NAME}
              box_branch is ${env.BOX_BRANCH}
              build_type is ${env.BUILD_TYPE}
@@ -23,7 +24,7 @@ class MtsUtils{
     //send to the .pl these three vars {filePath} $BOX_NAME $BOX_BRANCH $BUILD_TYPE
     def pearlFileWindows = "//fileril103/dev/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl"
     def pearlFileLinux = "/swdev/fileril103/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl"
-    printer.println new File(pearlFileWindows).text
+    steps.println new File(pearlFileWindows).text
   }
   
    /**
