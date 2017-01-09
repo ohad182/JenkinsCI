@@ -16,7 +16,7 @@ class MtsUtils{
  * 3. BUILD_TYPE (box or core)
  */
   def startBuild(printer){
-    steps.println """
+    steps.print """
              box_name is ${env.BOX_NAME}
              box_branch is ${env.BOX_BRANCH}
              build_type is ${env.BUILD_TYPE}
@@ -24,7 +24,7 @@ class MtsUtils{
     //send to the .pl these three vars {filePath} $BOX_NAME $BOX_BRANCH $BUILD_TYPE
     def pearlFileWindows = "//fileril103/dev/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl"
     def pearlFileLinux = "/swdev/fileril103/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl"
-    steps.println new File(pearlFileWindows).text
+    steps.print new File(pearlFileWindows).text
   }
   
    /**
