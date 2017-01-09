@@ -106,9 +106,36 @@ Tests_Are_Needed is: ${env.Tests_Are_Needed}
   }
   
   def createReport(){
-  
      steps.echo """
 createReport
+box_name is: ${env.BOX_NAME}
+box_branch is: ${env.BOX_BRANCH}
+core_branch is: ${env.CORE_BRANCH}
+mts_build_system_branch is: ${env.MTS_BUILD_SYSTEM_BRANCH}
+rest_api_branch is: ${env.REST_API_BRANCH}
+build_type is: ${env.BUILD_TYPE}
+webs_are_separated is: ${env.Webs_are_separated}
+Tests_Are_Needed is: ${env.Tests_Are_Needed}
+      """
+  }
+  
+  def grasTests(){
+     steps.echo """
+grasTests
+box_name is: ${env.BOX_NAME}
+box_branch is: ${env.BOX_BRANCH}
+core_branch is: ${env.CORE_BRANCH}
+mts_build_system_branch is: ${env.MTS_BUILD_SYSTEM_BRANCH}
+rest_api_branch is: ${env.REST_API_BRANCH}
+build_type is: ${env.BUILD_TYPE}
+webs_are_separated is: ${env.Webs_are_separated}
+Tests_Are_Needed is: ${env.Tests_Are_Needed}
+      """
+  }
+  
+  def finishBuild(){
+     steps.echo """
+finishBuild
 box_name is: ${env.BOX_NAME}
 box_branch is: ${env.BOX_BRANCH}
 core_branch is: ${env.CORE_BRANCH}
