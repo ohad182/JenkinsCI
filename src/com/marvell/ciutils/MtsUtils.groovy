@@ -15,8 +15,8 @@ class MtsUtils{
  * 2. BOX_BRANCH
  * 3. BUILD_TYPE (box or core)
  */
-  def startBuild(){
-    steps.stage('startBuild-iiner') { 
+  def startBuild(script){
+    script.stage('startBuild-iiner') { 
     steps.echo """
               startBuild
               box_name is ${env.BOX_NAME}
