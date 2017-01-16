@@ -17,6 +17,7 @@ class MtsUtils implements Serializable {
  */
   def startBuild(script){
     script.stage('startBuild-iiner') { 
+      script.node{
     steps.echo """
               startBuild
               box_name is ${env.BOX_NAME}
@@ -27,6 +28,7 @@ class MtsUtils implements Serializable {
               def pearlFileWindows = "//fileril103/dev/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl"
               def pearlFileLinux = "/swdev/fileril103/TOOLS/cc1tools/utils/auto_compile_git/Start_Build_Bx.pl"
                 steps.echo new File(pearlFileWindows).text
+    }
     }
   }
   
