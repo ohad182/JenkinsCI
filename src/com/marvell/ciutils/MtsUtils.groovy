@@ -1,6 +1,6 @@
 package com.marvell.ciutils
 
-class MtsUtils implements serializable {
+class MtsUtils extends  serializable {
   def env
   def steps
   MtsUtils(env, steps){
